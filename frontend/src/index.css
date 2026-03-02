@@ -4,27 +4,67 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark theme variables (default) */
 :root {
-  --background: 0 0% 2%;
-  --foreground: 210 40% 98%;
-  --card: 0 0% 7%;
-  --card-foreground: 210 40% 98%;
-  --popover: 0 0% 7%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 51 100% 50%;
-  --primary-foreground: 0 0% 0%;
-  --secondary: 215 20.2% 65.1%;
-  --secondary-foreground: 0 0% 0%;
-  --muted: 0 0% 15%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 51 100% 50%;
-  --accent-foreground: 0 0% 0%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 0 0% 15%;
-  --input: 0 0% 15%;
-  --ring: 51 100% 50%;
+  --background: 5 5 5;
+  --foreground: 248 250 252;
+  --card: 18 18 18;
+  --card-foreground: 248 250 252;
+  --popover: 18 18 18;
+  --popover-foreground: 248 250 252;
+  --primary: 255 215 0;
+  --primary-foreground: 0 0 0;
+  --secondary: 148 163 184;
+  --secondary-foreground: 0 0 0;
+  --muted: 39 39 42;
+  --muted-foreground: 148 163 184;
+  --accent: 255 215 0;
+  --accent-foreground: 0 0 0;
+  --destructive: 239 68 68;
+  --destructive-foreground: 248 250 252;
+  --border: 39 39 42;
+  --input: 39 39 42;
+  --ring: 255 215 0;
   --radius: 0.5rem;
+  
+  /* Custom colors */
+  --industrial-black: 5 5 5;
+  --industrial-gray: 18 18 18;
+  --industrial-steel: 39 39 42;
+  --safety-yellow: 255 215 0;
+  --text-primary: 248 250 252;
+  --text-secondary: 148 163 184;
+}
+
+/* Light theme variables */
+.light {
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+  --card: 248 250 252;
+  --card-foreground: 15 23 42;
+  --popover: 255 255 255;
+  --popover-foreground: 15 23 42;
+  --primary: 212 175 55;
+  --primary-foreground: 0 0 0;
+  --secondary: 100 116 139;
+  --secondary-foreground: 255 255 255;
+  --muted: 241 245 249;
+  --muted-foreground: 100 116 139;
+  --accent: 212 175 55;
+  --accent-foreground: 0 0 0;
+  --destructive: 239 68 68;
+  --destructive-foreground: 255 255 255;
+  --border: 226 232 240;
+  --input: 226 232 240;
+  --ring: 212 175 55;
+  
+  /* Custom colors */
+  --industrial-black: 255 255 255;
+  --industrial-gray: 248 250 252;
+  --industrial-steel: 226 232 240;
+  --safety-yellow: 212 175 55;
+  --text-primary: 15 23 42;
+  --text-secondary: 100 116 139;
 }
 
 * {
@@ -39,11 +79,12 @@ html {
 
 body {
   font-family: 'Manrope', sans-serif;
-  background-color: #050505;
-  color: #F8FAFC;
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -54,28 +95,51 @@ code {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
+/* Custom scrollbar - dark */
+.dark ::-webkit-scrollbar {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
+.dark ::-webkit-scrollbar-track {
   background: #121212;
 }
 
-::-webkit-scrollbar-thumb {
+.dark ::-webkit-scrollbar-thumb {
   background: #27272A;
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.dark ::-webkit-scrollbar-thumb:hover {
   background: #FFD700;
 }
 
+/* Custom scrollbar - light */
+.light ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
 /* Selection */
-::selection {
+.dark ::selection {
   background: rgba(255, 215, 0, 0.3);
   color: #FFD700;
+}
+
+.light ::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: #D4AF37;
 }
 
 /* Noise texture overlay */
@@ -87,8 +151,12 @@ code {
   height: 100%;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.03;
+  opacity: 0.02;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.light .noise-overlay {
+  opacity: 0.015;
 }
 
 /* Grid pattern */
@@ -99,53 +167,39 @@ code {
   background-size: 50px 50px;
 }
 
-/* Clip path for slant buttons */
-.clip-slant {
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
-}
-
-.clip-slant-reverse {
-  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
-}
-
-/* Gradient glow effect */
-.glow-effect {
-  position: relative;
-}
-
-.glow-effect::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, rgba(0,0,0,0) 50%);
-  pointer-events: none;
+.light .grid-pattern {
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
 }
 
 /* Input styles */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:hover,
+.dark input:-webkit-autofill:focus,
+.dark textarea:-webkit-autofill,
+.dark textarea:-webkit-autofill:hover,
+.dark textarea:-webkit-autofill:focus,
+.dark select:-webkit-autofill,
+.dark select:-webkit-autofill:hover,
+.dark select:-webkit-autofill:focus {
   -webkit-text-fill-color: #F8FAFC;
   -webkit-box-shadow: 0 0 0px 1000px #121212 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* Line decorations */
-.line-vertical {
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);
+.light input:-webkit-autofill,
+.light input:-webkit-autofill:hover,
+.light input:-webkit-autofill:focus,
+.light textarea:-webkit-autofill,
+.light textarea:-webkit-autofill:hover,
+.light textarea:-webkit-autofill:focus,
+.light select:-webkit-autofill,
+.light select:-webkit-autofill:hover,
+.light select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #0f172a;
+  -webkit-box-shadow: 0 0 0px 1000px #f8fafc inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 /* Corner accents */
@@ -153,13 +207,18 @@ select:-webkit-autofill:focus {
   position: relative;
 }
 
-.corner-accent::before,
-.corner-accent::after {
+.dark .corner-accent::before,
+.dark .corner-accent::after {
   content: '';
   position: absolute;
   width: 12px;
   height: 12px;
   border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.light .corner-accent::before,
+.light .corner-accent::after {
+  border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .corner-accent::before {
@@ -189,4 +248,12 @@ select:-webkit-autofill:focus {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Theme transition */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, fill 0.3s ease, stroke 0.3s ease !important;
 }
