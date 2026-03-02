@@ -21,13 +21,13 @@ const StickyContactBar = () => {
           data-testid="whatsapp-btn-desktop"
         >
           <MessageCircle size={24} />
-          <span className="absolute right-full mr-3 bg-industrial-gray text-white text-sm px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+          <span className="absolute right-full mr-3 bg-[rgb(var(--industrial-gray))] text-[rgb(var(--text-primary))] text-sm px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-[rgb(var(--border))]">
             Chat on WhatsApp
           </span>
         </motion.a>
         <motion.a
           href={`tel:${companyInfo.contact.phone}`}
-          className="w-14 h-14 bg-safety-yellow rounded-full flex items-center justify-center text-black shadow-lg hover:bg-white transition-colors group"
+          className="w-14 h-14 bg-[rgb(var(--safety-yellow))] rounded-full flex items-center justify-center text-black shadow-lg hover:brightness-110 transition-all group"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1.1, duration: 0.3 }}
@@ -35,7 +35,7 @@ const StickyContactBar = () => {
           data-testid="call-btn-desktop"
         >
           <Phone size={24} />
-          <span className="absolute right-full mr-3 bg-industrial-gray text-white text-sm px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+          <span className="absolute right-full mr-3 bg-[rgb(var(--industrial-gray))] text-[rgb(var(--text-primary))] text-sm px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-[rgb(var(--border))]">
             Call Now
           </span>
         </motion.a>
@@ -43,12 +43,12 @@ const StickyContactBar = () => {
 
       {/* Mobile - Bottom bar */}
       <motion.div
-        className="lg:hidden fixed bottom-0 left-0 right-0 bg-industrial-gray border-t border-white/10 z-40 safe-area-inset-bottom"
+        className="lg:hidden fixed bottom-0 left-0 right-0 bg-[rgb(var(--industrial-gray))] border-t border-[rgb(var(--border))] z-40 safe-area-inset-bottom"
         initial={{ y: 100 }}
         animate={{ y: 0 }}
         transition={{ delay: 0.5, duration: 0.3 }}
       >
-        <div className="grid grid-cols-2 divide-x divide-white/10">
+        <div className="grid grid-cols-2 divide-x divide-[rgb(var(--border))]">
           <a
             href={whatsappUrl}
             target="_blank"
@@ -61,7 +61,7 @@ const StickyContactBar = () => {
           </a>
           <a
             href={`tel:${companyInfo.contact.phone}`}
-            className="flex items-center justify-center gap-2 py-4 text-safety-yellow hover:bg-safety-yellow/10 transition-colors"
+            className="flex items-center justify-center gap-2 py-4 text-[rgb(var(--safety-yellow))] hover:bg-[rgb(var(--safety-yellow))]/10 transition-colors"
             data-testid="call-btn-mobile"
           >
             <Phone size={20} />
