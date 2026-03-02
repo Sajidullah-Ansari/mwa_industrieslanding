@@ -7,7 +7,7 @@ export const projects = [
     location: "Chhattisgarh, India",
     description: "Complete fabrication and erection of pipe rack structures for a steel plant expansion project. The scope included structural steel with complex routing requirements.",
     highlights: ["Structural Steel", "On-time Delivery", "Quality Approved"],
-    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1610551675799-50d4d0fe0252?w=800&q=80",
     year: "2024"
   },
   {
@@ -18,7 +18,7 @@ export const projects = [
     location: "Gujarat, India",
     description: "Design assistance and fabrication of SS316L pressure vessels for corrosive chemical service. Full radiography testing completed.",
     highlights: ["SS316L Material", "Full RT Inspection", "Quality Certified"],
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1640931020126-7f63ad7f1d37?w=800&q=80",
     year: "2024"
   },
   {
@@ -29,7 +29,7 @@ export const projects = [
     location: "Madhya Pradesh, India",
     description: "Fabrication of conveyor gallery structures for coal handling plant. The project involved complex geometry and tight tolerances for belt alignment.",
     highlights: ["Complex Geometry", "Precision Alignment", "Delivered On-time"],
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1748946469988-61310d7ea26a?w=800&q=80",
     year: "2023"
   },
   {
@@ -40,7 +40,7 @@ export const projects = [
     location: "Odisha, India",
     description: "Fabrication of Duplex SS piping spools for offshore crude processing. All welding performed by qualified welders with full radiography.",
     highlights: ["Duplex SS Material", "100% RT", "Certified Welders"],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1707596830261-9c6138a6dd3b?w=800&q=80",
     year: "2023"
   },
   {
@@ -51,7 +51,7 @@ export const projects = [
     location: "Maharashtra, India",
     description: "Fabrication and supply of API 650 storage tanks for petroleum products. Multiple tanks of various capacities.",
     highlights: ["API 650 Compliant", "Multiple Capacities", "Turnkey Supply"],
-    image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1772376920749-afdc99c517f7?w=800&q=80",
     year: "2023"
   },
   {
@@ -62,7 +62,7 @@ export const projects = [
     location: "Chhattisgarh, India",
     description: "Replacement of tube bundle for shell & tube heat exchanger. Precise tube-to-tubesheet welding with hydraulic testing.",
     highlights: ["TEMA Class R", "Tube Expansion", "Hydraulic Testing"],
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1655039353512-ab38d6a37a92?w=800&q=80",
     year: "2024"
   },
   {
@@ -73,7 +73,7 @@ export const projects = [
     location: "Chhattisgarh, India",
     description: "Machining of large roller shafts and bushings for vertical roller mill. Heavy turning and boring operations with tight tolerances.",
     highlights: ["Heavy Components", "Precision Machining", "Surface Finishing"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1575305842946-0e807ce6f3fc?w=800&q=80",
     year: "2024"
   },
   {
@@ -84,7 +84,7 @@ export const projects = [
     location: "Andhra Pradesh, India",
     description: "Fabrication of jacketed reactor vessel in SS304 with half-pipe jacket for temperature control. Including agitator mounting and nozzles.",
     highlights: ["SS304 Construction", "Half-pipe Jacket", "Agitator Support"],
-    image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1640550216188-9ddd6dd63238?w=800&q=80",
     year: "2023"
   }
 ];

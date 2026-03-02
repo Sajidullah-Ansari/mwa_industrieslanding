@@ -3,7 +3,7 @@ export const companyInfo = {
   tagline: "Excellence is our foundation.\nTrust is our legacy.",
   taglineShort: "Excellence is our foundation. Trust is our legacy.",
   description: "MWA Industries is a newly established fabrication unit built on a strong legacy of experience. Our core technical leadership is backed by 35+ years of hands-on industry experience in heavy fabrication, machining, and industrial execution.",
-  logo: "https://customer-assets.emergentagent.com/job_fabrication-pro-3/artifacts/6w7oqlfp_MWA%20Industries1.jpg.jpeg",
+  logo: "/images/mwa-logo.png",
   
   contact: {
     address: "Plot No. 77, Industrial Area, Bartori (Tilda), District Raipur (C.G.), India",
