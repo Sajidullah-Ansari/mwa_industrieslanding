@@ -8,16 +8,16 @@ const Quality = () => {
   return (
     <div className="min-h-screen pt-32 lg:pt-44" data-testid="quality-page">
       {/* Hero Section */}
-      <section className="py-16 bg-industrial-black">
+      <section className="py-16 bg-[rgb(var(--industrial-black))]">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <span className="font-mono text-xs uppercase tracking-widest text-safety-yellow mb-4 block">
+            <span className="font-mono text-xs uppercase tracking-widest text-[rgb(var(--safety-yellow))] mb-4 block">
               Quality & Safety
             </span>
-            <h1 className="font-oswald font-bold text-4xl md:text-6xl uppercase tracking-tight text-white mb-6">
-              Commitment to <span className="text-safety-yellow">Excellence</span>
+            <h1 className="font-oswald font-bold text-4xl md:text-6xl uppercase tracking-tight text-[rgb(var(--text-primary))] mb-6">
+              Commitment to <span className="text-[rgb(var(--safety-yellow))]">Excellence</span>
             </h1>
-            <p className="text-slate-400 text-lg max-w-3xl leading-relaxed">
+            <p className="text-[rgb(var(--text-secondary))] text-lg max-w-3xl leading-relaxed">
               At MWA Industries, quality and safety are not just policies—they are fundamental values that guide every aspect of our operations.
             </p>
           </AnimatedSection>
@@ -25,24 +25,24 @@ const Quality = () => {
       </section>
 
       {/* Quality Section */}
-      <section className="py-24 bg-industrial-gray">
+      <section className="py-24 bg-[rgb(var(--industrial-gray))]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 bg-safety-yellow flex items-center justify-center">
+                <div className="w-14 h-14 bg-[rgb(var(--safety-yellow))] flex items-center justify-center">
                   <CheckCircle size={28} className="text-black" />
                 </div>
                 <div>
-                  <span className="font-mono text-xs uppercase tracking-widest text-safety-yellow block">
+                  <span className="font-mono text-xs uppercase tracking-widest text-[rgb(var(--safety-yellow))] block">
                     Quality Assurance
                   </span>
-                  <h2 className="font-oswald font-medium text-3xl text-white uppercase">
+                  <h2 className="font-oswald font-medium text-3xl text-[rgb(var(--text-primary))] uppercase">
                     Built-In Quality
                   </h2>
                 </div>
               </div>
-              <p className="text-slate-400 leading-relaxed mb-8">
+              <p className="text-[rgb(var(--text-secondary))] leading-relaxed mb-8">
                 {companyInfo.qualityPolicy.statement}
               </p>
               <div className="space-y-4">
@@ -54,22 +54,23 @@ const Quality = () => {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-start gap-3"
                   >
-                    <CheckCircle size={18} className="text-safety-yellow shrink-0 mt-1" />
-                    <span className="text-slate-300">{practice}</span>
+                    <CheckCircle size={18} className="text-[rgb(var(--safety-yellow))] shrink-0 mt-1" />
+                    <span className="text-[rgb(var(--text-secondary))]">{practice}</span>
                   </motion.div>
                 ))}
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.2} direction="left">
               <div className="relative">
-                <div className="aspect-square bg-industrial-black border border-white/10 overflow-hidden">
+                <div className="aspect-square bg-[rgb(var(--industrial-black))] border border-[rgb(var(--border))] overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80"
+                    src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80"
                     alt="Quality Inspection"
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
-                <div className="absolute -bottom-6 -left-6 bg-safety-yellow p-6">
+                <div className="absolute -bottom-6 -left-6 bg-[rgb(var(--safety-yellow))] p-6">
                   <FileCheck size={32} className="text-black mb-2" />
                   <span className="font-oswald font-bold text-lg text-black block">100%</span>
                   <span className="font-mono text-xs uppercase text-black/70">Documented Process</span>
@@ -81,20 +82,20 @@ const Quality = () => {
       </section>
 
       {/* Quality Process Timeline */}
-      <section className="py-24 bg-industrial-black">
+      <section className="py-24 bg-[rgb(var(--industrial-black))]">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-16">
-            <span className="font-mono text-xs uppercase tracking-widest text-safety-yellow mb-4 block">
+            <span className="font-mono text-xs uppercase tracking-widest text-[rgb(var(--safety-yellow))] mb-4 block">
               Our Process
             </span>
-            <h2 className="font-oswald font-medium text-3xl md:text-5xl uppercase tracking-tight text-white">
+            <h2 className="font-oswald font-medium text-3xl md:text-5xl uppercase tracking-tight text-[rgb(var(--text-primary))]">
               Quality at Every Step
             </h2>
           </AnimatedSection>
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-white/10" />
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-[rgb(var(--border))]" />
 
             {[
               { title: "Material Receipt", desc: "Incoming inspection and material verification against certificates", icon: FileCheck },
@@ -106,19 +107,19 @@ const Quality = () => {
               <AnimatedSection key={step.title} delay={index * 0.15}>
                 <div className={`flex items-center gap-8 mb-12 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                   <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
-                    <div className={`bg-industrial-gray border border-white/5 p-8 ${index % 2 === 0 ? 'lg:ml-auto' : 'lg:mr-auto'} max-w-md`}>
-                      <span className="font-mono text-xs text-safety-yellow block mb-2">
+                    <div className={`bg-[rgb(var(--industrial-gray))] border border-[rgb(var(--border))] p-8 ${index % 2 === 0 ? 'lg:ml-auto' : 'lg:mr-auto'} max-w-md`}>
+                      <span className="font-mono text-xs text-[rgb(var(--safety-yellow))] block mb-2">
                         Step {String(index + 1).padStart(2, '0')}
                       </span>
-                      <h3 className="font-oswald font-medium text-xl text-white uppercase mb-3">
+                      <h3 className="font-oswald font-medium text-xl text-[rgb(var(--text-primary))] uppercase mb-3">
                         {step.title}
                       </h3>
-                      <p className="text-slate-400 text-sm">
+                      <p className="text-[rgb(var(--text-secondary))] text-sm">
                         {step.desc}
                       </p>
                     </div>
                   </div>
-                  <div className="hidden lg:flex w-16 h-16 bg-safety-yellow items-center justify-center shrink-0 relative z-10">
+                  <div className="hidden lg:flex w-16 h-16 bg-[rgb(var(--safety-yellow))] items-center justify-center shrink-0 relative z-10">
                     <step.icon size={28} className="text-black" />
                   </div>
                   <div className="flex-1 hidden lg:block" />
@@ -130,19 +131,20 @@ const Quality = () => {
       </section>
 
       {/* Safety Section */}
-      <section className="py-24 bg-industrial-gray">
+      <section className="py-24 bg-[rgb(var(--industrial-gray))]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="right" className="order-2 lg:order-1">
               <div className="relative">
-                <div className="aspect-square bg-industrial-black border border-white/10 overflow-hidden">
+                <div className="aspect-square bg-[rgb(var(--industrial-black))] border border-[rgb(var(--border))] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
                     alt="Safety First"
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-safety-yellow p-6">
+                <div className="absolute -bottom-6 -right-6 bg-[rgb(var(--safety-yellow))] p-6">
                   <Shield size={32} className="text-black mb-2" />
                   <span className="font-oswald font-bold text-lg text-black block">Zero</span>
                   <span className="font-mono text-xs uppercase text-black/70">Tolerance Policy</span>
@@ -151,19 +153,19 @@ const Quality = () => {
             </AnimatedSection>
             <AnimatedSection delay={0.2} className="order-1 lg:order-2">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 bg-safety-yellow flex items-center justify-center">
+                <div className="w-14 h-14 bg-[rgb(var(--safety-yellow))] flex items-center justify-center">
                   <Shield size={28} className="text-black" />
                 </div>
                 <div>
-                  <span className="font-mono text-xs uppercase tracking-widest text-safety-yellow block">
+                  <span className="font-mono text-xs uppercase tracking-widest text-[rgb(var(--safety-yellow))] block">
                     Workplace Safety
                   </span>
-                  <h2 className="font-oswald font-medium text-3xl text-white uppercase">
+                  <h2 className="font-oswald font-medium text-3xl text-[rgb(var(--text-primary))] uppercase">
                     Safety First
                   </h2>
                 </div>
               </div>
-              <p className="text-slate-400 leading-relaxed mb-8">
+              <p className="text-[rgb(var(--text-secondary))] leading-relaxed mb-8">
                 {companyInfo.safetyPolicy.statement}
               </p>
               <div className="space-y-4">
@@ -175,8 +177,8 @@ const Quality = () => {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-start gap-3"
                   >
-                    <Shield size={18} className="text-safety-yellow shrink-0 mt-1" />
-                    <span className="text-slate-300">{practice}</span>
+                    <Shield size={18} className="text-[rgb(var(--safety-yellow))] shrink-0 mt-1" />
+                    <span className="text-[rgb(var(--text-secondary))]">{practice}</span>
                   </motion.div>
                 ))}
               </div>
@@ -186,13 +188,13 @@ const Quality = () => {
       </section>
 
       {/* Standards Section */}
-      <section className="py-24 bg-industrial-black">
+      <section className="py-24 bg-[rgb(var(--industrial-black))]">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-16">
-            <span className="font-mono text-xs uppercase tracking-widest text-safety-yellow mb-4 block">
+            <span className="font-mono text-xs uppercase tracking-widest text-[rgb(var(--safety-yellow))] mb-4 block">
               Standards We Follow
             </span>
-            <h2 className="font-oswald font-medium text-3xl md:text-5xl uppercase tracking-tight text-white">
+            <h2 className="font-oswald font-medium text-3xl md:text-5xl uppercase tracking-tight text-[rgb(var(--text-primary))]">
               Industry Standards
             </h2>
           </AnimatedSection>
@@ -205,18 +207,18 @@ const Quality = () => {
               { name: "TEMA", desc: "Heat Exchangers" },
             ].map((standard, index) => (
               <AnimatedSection key={standard.name} delay={index * 0.1}>
-                <div className="bg-industrial-gray border border-white/5 p-6 text-center hover:border-safety-yellow/30 transition-colors">
-                  <span className="font-oswald font-bold text-2xl text-safety-yellow block mb-2">
+                <div className="bg-[rgb(var(--industrial-gray))] border border-[rgb(var(--border))] p-6 text-center hover:border-[rgb(var(--safety-yellow))]/30 transition-colors">
+                  <span className="font-oswald font-bold text-2xl text-[rgb(var(--safety-yellow))] block mb-2">
                     {standard.name}
                   </span>
-                  <span className="text-slate-400 text-sm">{standard.desc}</span>
+                  <span className="text-[rgb(var(--text-secondary))] text-sm">{standard.desc}</span>
                 </div>
               </AnimatedSection>
             ))}
           </div>
 
           <AnimatedSection className="text-center mt-12">
-            <p className="text-slate-500 text-sm">
+            <p className="text-[rgb(var(--text-secondary))] text-sm">
               * We follow industry-standard practices. Specific certifications available upon request.
             </p>
           </AnimatedSection>
@@ -224,7 +226,7 @@ const Quality = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-safety-yellow">
+      <section className="py-24 bg-[rgb(var(--safety-yellow))]">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center">
             <h2 className="font-oswald font-bold text-3xl md:text-5xl uppercase tracking-tight text-black mb-6">
@@ -236,7 +238,7 @@ const Quality = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/request-quote"
-                className="bg-black text-white font-oswald font-bold uppercase px-8 py-4 flex items-center gap-3 hover:bg-industrial-gray transition-colors"
+                className="bg-black text-white font-oswald font-bold uppercase px-8 py-4 flex items-center gap-3 hover:bg-[rgb(var(--industrial-gray))] transition-colors"
                 data-testid="quality-request-quote-btn"
               >
                 Request a Quote
