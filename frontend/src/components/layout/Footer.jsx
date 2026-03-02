@@ -44,7 +44,7 @@ const Footer = () => {
               Trust is our legacy.
             </p>
             <p className="text-neutral-400 text-sm leading-relaxed mb-6">
-              A new firm powered by 35+ years of fabrication expertise.
+              Your trusted fabrication partner backed by 35+ years of expertise.
             </p>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-3 text-neutral-400">
