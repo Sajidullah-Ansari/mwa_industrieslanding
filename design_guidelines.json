@@ -1,0 +1,178 @@
+{
+  "brand_identity": {
+    "name": "MWA Industries",
+    "tagline": "Precision Engineering. Heavy Fabrication. Global Standards.",
+    "core_values": ["Integrity", "Precision", "Safety", "Innovation"],
+    "aesthetic": "Dark Industrial, Metallic, Engineering-First, Cinematic",
+    "emotional_tone": "Trustworthy, Capable, Heavy-Duty, Modern"
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Oswald, sans-serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "imports": [
+      "@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');"
+    ],
+    "usage_rules": {
+      "h1": "font-oswald font-bold text-5xl md:text-7xl uppercase tracking-tight leading-none",
+      "h2": "font-oswald font-medium text-3xl md:text-5xl uppercase tracking-tight",
+      "h3": "font-oswald font-medium text-2xl md:text-3xl uppercase tracking-normal",
+      "body": "font-body text-base md:text-lg text-slate-300 leading-relaxed",
+      "label": "font-mono text-xs uppercase tracking-widest text-slate-400",
+      "nav": "font-oswald text-sm uppercase tracking-wide"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#050505",
+      "surface": "#121212",
+      "surface_highlight": "#1E1E1E",
+      "primary": "#FFD700",
+      "secondary": "#94A3B8",
+      "text_primary": "#F8FAFC",
+      "text_secondary": "#94A3B8",
+      "border": "#27272A",
+      "success": "#22C55E",
+      "error": "#EF4444"
+    },
+    "tailwind_config_extension": {
+      "colors": {
+        "industrial-black": "#050505",
+        "industrial-gray": "#121212",
+        "industrial-steel": "#27272A",
+        "safety-yellow": "#FFD700",
+        "safety-orange": "#F97316"
+      }
+    },
+    "gradients": {
+      "metallic": "linear-gradient(135deg, #334155 0%, #0f172a 100%)",
+      "glow": "radial-gradient(circle at center, rgba(255, 215, 0, 0.15) 0%, rgba(0,0,0,0) 70%)"
+    }
+  },
+  "layout_strategies": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "section_spacing": "py-24 md:py-32",
+    "grid_system": {
+      "bento": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6",
+      "gallery": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
+      "feature": "grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+    }
+  },
+  "component_styles": {
+    "buttons": {
+      "primary": "bg-safety-yellow text-black font-oswald uppercase font-bold px-8 py-4 hover:bg-white transition-colors duration-300 clip-path-slant",
+      "secondary": "border border-slate-700 text-white font-oswald uppercase px-8 py-4 hover:bg-slate-800 transition-colors duration-300",
+      "ghost": "text-safety-yellow hover:text-white font-mono text-sm uppercase tracking-widest hover:underline decoration-1 underline-offset-4"
+    },
+    "cards": {
+      "base": "bg-neutral-900/50 border border-white/10 backdrop-blur-sm p-8 hover:border-safety-yellow/50 transition-colors duration-500 group relative overflow-hidden",
+      "tilt": "Use 'react-tilt' or Framer Motion for 3D hover effect on cards"
+    },
+    "inputs": {
+      "base": "bg-black/50 border-b border-white/20 px-0 py-4 text-white placeholder:text-neutral-600 focus:border-safety-yellow focus:outline-none rounded-none transition-colors w-full font-body"
+    },
+    "navigation": {
+      "base": "fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10 h-20 flex items-center justify-between px-6 md:px-12"
+    }
+  },
+  "animation_guide": {
+    "library": "framer-motion",
+    "preferences": {
+      "reduced_motion": "respect-user-settings"
+    },
+    "variants": {
+      "fadeInUp": {
+        "hidden": { "opacity": 0, "y": 40 },
+        "visible": { "opacity": 1, "y": 0, "transition": { "duration": 0.8, "ease": [0.22, 1, 0.36, 1] } }
+      },
+      "staggerContainer": {
+        "hidden": {},
+        "visible": { "transition": { "staggerChildren": 0.1 } }
+      },
+      "revealText": {
+        "hidden": { "y": "100%" },
+        "visible": { "y": "0%", "transition": { "duration": 0.6, "ease": "circOut" } }
+      },
+      "scaleIn": {
+        "hidden": { "scale": 0.9, "opacity": 0 },
+        "visible": { "scale": 1, "opacity": 1, "transition": { "duration": 0.5 } }
+      }
+    },
+    "specific_effects": {
+      "magnetic_button": "Use framer-motion to make buttons follow cursor slightly",
+      "parallax_hero": "Use useScroll and useTransform for y-axis movement of background images",
+      "count_up": "Use framer-motion useSpring for smooth number counting"
+    }
+  },
+  "visual_enhancers": {
+    "textures": {
+      "noise": "url('/noise.png') or CSS radial-gradient overlay",
+      "grid": "Linear gradient grid pattern 1px lines with 0.05 opacity"
+    },
+    "details": {
+      "corner_accents": "Add small SVG brackets or 'plus' signs at corners of cards for technical feel",
+      "lines": "Vertical 1px lines running through the page for structural alignment"
+    }
+  },
+  "image_assets": {
+    "hero": [
+      {
+        "url": "https://images.unsplash.com/photo-1641471349326-a95b709b946f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxpbmR1c3RyaWFsJTIwd2VsZGluZyUyMHNwYXJrcyUyMGZhY3RvcnklMjBkYXJrJTIwY2luZW1hdGljfGVufDB8fHx8MTc3MjQ0ODkxMXww&ixlib=rb-4.1.0&q=85",
+        "alt": "Welder working with sparks in dark factory",
+        "category": "hero_main"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1740072161824-cc5e9517290c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwd2VsZGluZyUyMHNwYXJrcyUyMGZhY3RvcnklMjBkYXJrJTIwY2luZW1hdGljfGVufDB8fHx8MTc3MjQ0ODkxMXww&ixlib=rb-4.1.0&q=85",
+        "alt": "Cinematic welding shot",
+        "category": "hero_bg"
+      }
+    ],
+    "services": [
+      {
+        "url": "https://images.unsplash.com/photo-1762889597634-264f0907820b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxoZWF2eSUyMHN0ZWVsJTIwc3RydWN0dXJlJTIwZW5naW5lZXJpbmclMjBjb25zdHJ1Y3Rpb258ZW58MHx8fHwxNzcyNDQ4OTEyfDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Heavy steel structure crane",
+        "category": "service_structures"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1720036236632-fdb6211cf317?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxpbmR1c3RyaWFsJTIwd2VsZGluZyUyMHNwYXJrcyUyMGZhY3RvcnklMjBkYXJrJTIwY2luZW1hdGljfGVufDB8fHx8MTc3MjQ0ODkxMXww&ixlib=rb-4.1.0&q=85",
+        "alt": "Pipes warehouse",
+        "category": "service_piping"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1701952711272-ec97bb9cf95d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwzfHxpbmR1c3RyaWFsJTIwd2VsZGluZyUyMHNwYXJrcyUyMGZhY3RvcnklMjBkYXJrJTIwY2luZW1hdGljfGVufDB8fHx8MTc3MjQ0ODkxMXww&ixlib=rb-4.1.0&q=85",
+        "alt": "Machining operation",
+        "category": "service_machining"
+      }
+    ],
+    "about": [
+      {
+        "url": "https://images.unsplash.com/photo-1771433050765-72a5eb1658ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHw0fHxoZWF2eSUyMHN0ZWVsJTIwc3RydWN0dXJlJTIwZW5naW5lZXJpbmclMjBjb25zdHJ1Y3Rpb258ZW58MHx8fHwxNzcyNDQ4OTEyfDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Construction engineering context",
+        "category": "about_bg"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "1. SETUP: Install 'framer-motion', 'lucide-react', 'clsx', 'tailwind-merge' immediately.",
+    "2. FONTS: Add the Google Fonts import to index.css immediately.",
+    "3. THEME: Force Dark Mode. Do not implement a light mode toggle. The brand is 'Dark Industrial'.",
+    "4. LAYOUT: Use the 'Bento Grid' strategy for the Services and Industries sections.",
+    "5. NAVIGATION: Create a sticky navbar that compresses on scroll. Include a 'Request Quote' primary button.",
+    "6. CONTACT: Implement the 'Sticky Contact Bar' for mobile (WhatsApp + Call) as requested.",
+    "7. FOOTER: Massive footer with 'MWA' logo in huge typography (opacity 10%) in the background.",
+    "8. FORMS: Use standard HTML forms styled with Tailwind (border-b only) for a minimal technical look. No boxy inputs.",
+    "9. PLACEHOLDERS: For any missing images, use a solid dark gray div with a technical icon in the center.",
+    "10. DATA: Store all content (services list, projects, team) in a `src/data` folder as JSON/JS objects to meet the 'JSON-based data' requirement.",
+    "11. ADMIN: Create a simple /admin route (mock login) to view form submissions stored in localStorage or mocked backend."
+  ],
+  "universal_guidelines": [
+    "Do not use gradients for backgrounds, use solid dark colors or subtle noise.",
+    "Use 'Oswald' for all headings. Use 'Manrope' for all body text.",
+    "Primary button color is Safety Yellow (#FFD700) with Black text.",
+    "All cards must have a subtle 1px border (white/10).",
+    "Use generous padding (py-20 minimum) for all sections.",
+    "Ensure 'data-testid' is present on all interactive elements."
+  ]
+}
