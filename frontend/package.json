@@ -7,7 +7,7 @@
   "schema-utils": "2.7.1"
 },
   "engines": {
-  "node": "24.x"
+  "node": ">=18 <21"
 },
   "private": true,
   "dependencies": {
