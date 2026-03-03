@@ -2,8 +2,9 @@
   "name": "frontend",
   "version": "0.1.0",
   "overrides": {
-  "ajv": "^8.12.0",
-  "ajv-keywords": "^5.1.0"
+  "ajv": "6.12.6",
+  "ajv-keywords": "3.5.2",
+  "schema-utils": "2.7.1"
 },
   "engines": {
   "node": "24.x"
